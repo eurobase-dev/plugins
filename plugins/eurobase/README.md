@@ -1,0 +1,45 @@
+# Eurobase for Codex and Claude Code
+
+Connects your agent to Eurobase's remote MCP server at `https://api.eurobase.dev/mcp`
+with OAuth. The plugin contains only that connection: no local server, hook, script,
+bundled credential or permission bypass. Eurobase decides what the agent may do.
+
+## Install
+
+Codex:
+
+```sh
+codex plugin marketplace add eurobase-dev/plugins
+codex plugin add eurobase@eurobase
+```
+
+Claude Code:
+
+```sh
+claude plugin marketplace add eurobase-dev/plugins
+claude plugin install eurobase@eurobase
+```
+
+Start a new session and sign in to the `eurobase` server when the agent asks
+(Claude Code: `/mcp`). Eurobase opens in your browser: choose the projects, the
+organization where the agent may create projects, and the level of each permission.
+
+Prefer a direct connection without the plugin? See
+[eurobase.dev/docs/agents](https://eurobase.dev/docs/agents). Use either the plugin or a
+direct connection, not both, so the agent does not see duplicate tools.
+
+## Use
+
+- "Deploy this repository on Eurobase." The agent prepares the project and gives you a
+  confirmation link. Enter variable values there and select **Publish**; secret values
+  never reach the agent. The agent then follows the deployment until the site responds.
+- "Show the latest deployment of my project and explain its failure from the logs."
+
+Every deployment, redeploy, rollback and new project needs your approval in Eurobase.
+The agent cannot delete anything. Never paste tokens, cookies or secrets into a prompt
+or into `.mcp.json`.
+
+## Revoke
+
+Revoke access in Eurobase under Settings → Connected apps. Removing the plugin alone
+does not revoke the connection.

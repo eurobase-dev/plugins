@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "eurobase": {
+      "type": "http",
+      "url": "https://api.eurobase.dev/mcp"
+    }
+  }
+}
