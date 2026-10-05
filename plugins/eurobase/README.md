@@ -30,12 +30,12 @@ direct connection, not both, so the agent does not see duplicate tools.
 
 ## Use
 
-- "Deploy this repository on Eurobase." The agent prepares the project and gives you a
-  confirmation link. Enter variable values there and select **Publish**; secret values
-  never reach the agent. The agent then follows the deployment until the site responds.
+- "Deploy this repository on Eurobase." The agent creates the project, starts the first
+  deployment and follows it until the site responds. Add secret values in the Eurobase
+  dashboard; they never pass through the agent.
 - "Show the latest deployment of my project and explain its failure from the logs."
 
-Every deployment, redeploy, rollback and new project needs your approval in Eurobase.
+Writes need the Write or Full level you grant on the consent page.
 The agent cannot delete anything. Never paste tokens, cookies or secrets into a prompt
 or into `.mcp.json`.
 

@@ -1,7 +1,7 @@
 {
   "name": "eurobase",
-  "version": "0.2.0",
-  "description": "Eurobase remote MCP: publish GitHub projects with initial variables, inspect deployments and logs, and confirm each write.",
+  "version": "0.3.0",
+  "description": "Eurobase remote MCP: deploy GitHub repositories and inspect deployments, logs and usage.",
   "author": { "name": "Eurobase" },
   "homepage": "https://eurobase.dev",
   "repository": "https://github.com/eurobase-dev/plugins"

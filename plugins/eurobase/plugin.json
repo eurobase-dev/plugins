@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "eurobase",
-  "version": "0.2.0",
-  "description": "Deploy GitHub repositories to Eurobase and inspect deployments, logs and usage. Every deploy waits for your approval in Eurobase.",
+  "version": "0.3.0",
+  "description": "Deploy GitHub repositories to Eurobase and inspect deployments, logs and usage.",
   "author": {
     "name": "Eurobase",
     "email": "support@eurobase.dev",
@@ -16,7 +16,7 @@
       "interface": {
         "displayName": "Eurobase",
         "shortDescription": "Deploy apps on Eurobase",
-        "longDescription": "Eurobase builds and runs your apps from GitHub on European infrastructure. Publish a repository as a new project, deploy, redeploy or roll back, and read deployments, logs, diagnoses and usage for the projects you choose. Every deployment and new project waits for your approval on a Eurobase confirmation page, and secret values never reach the assistant.",
+        "longDescription": "Eurobase builds and runs your apps from GitHub on European infrastructure. Publish a repository as a new project, deploy, redeploy or roll back, and read deployments, logs, diagnoses and usage for the projects you choose. Secret values are added in the Eurobase dashboard and never pass through the assistant.",
         "developerName": "Eurobase",
         "category": "Developer Tools",
         "capabilities": ["Read", "Write"],

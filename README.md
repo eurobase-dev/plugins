@@ -4,7 +4,7 @@ Plugin marketplace for connecting AI coding agents to [Eurobase](https://eurobas
 
 | Plugin | What it does |
 |---|---|
-| [`eurobase`](plugins/eurobase) | Connects Codex or Claude Code to the Eurobase MCP server with OAuth: deploy repositories with your approval, read deployments and logs. |
+| [`eurobase`](plugins/eurobase) | Connects Codex or Claude Code to the Eurobase MCP server with OAuth: deploy repositories, read deployments and logs. |
 
 Codex:
 

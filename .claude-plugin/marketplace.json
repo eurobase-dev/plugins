@@ -6,7 +6,7 @@
     {
       "name": "eurobase",
       "source": "./plugins/eurobase",
-      "description": "Connect to Eurobase with OAuth to publish GitHub projects with initial variables and inspect confirmed deployments."
+      "description": "Connect to Eurobase with OAuth to deploy GitHub repositories and inspect deployments, logs and usage."
     }
   ]
 }
