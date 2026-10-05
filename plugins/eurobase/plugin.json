@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "eurobase",
+  "version": "0.2.0",
+  "description": "Deploy GitHub repositories to Eurobase and inspect deployments, logs and usage. Every deploy waits for your approval in Eurobase.",
+  "author": {
+    "name": "Eurobase",
+    "email": "support@eurobase.dev",
+    "url": "https://eurobase.dev"
+  },
+  "homepage": "https://eurobase.dev/docs/agents",
+  "repository": "https://github.com/eurobase-dev/plugins",
+  "keywords": ["deploy", "hosting", "cloud", "europe", "logs"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Eurobase",
+        "shortDescription": "Deploy apps on Eurobase",
+        "longDescription": "Eurobase builds and runs your apps from GitHub on European infrastructure. Publish a repository as a new project, deploy, redeploy or roll back, and read deployments, logs, diagnoses and usage for the projects you choose. Every deployment and new project waits for your approval on a Eurobase confirmation page, and secret values never reach the assistant.",
+        "developerName": "Eurobase",
+        "category": "Developer Tools",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://eurobase.dev",
+        "privacyPolicyURL": "https://eurobase.dev/legal/privacy",
+        "termsOfServiceURL": "https://eurobase.dev/legal/terms",
+        "defaultPrompt": [
+          "Deploy this GitHub repository on Eurobase as a new project.",
+          "Why did the latest deployment of my Eurobase project fail?"
+        ],
+        "brandColor": "#1D4ED8",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
