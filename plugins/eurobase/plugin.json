@@ -10,16 +10,25 @@
   },
   "homepage": "https://eurobase.dev/docs/agents",
   "repository": "https://github.com/eurobase-dev/plugins",
-  "keywords": ["deploy", "hosting", "cloud", "europe", "logs"],
+  "keywords": [
+    "deploy",
+    "hosting",
+    "cloud",
+    "europe",
+    "logs"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Eurobase",
         "shortDescription": "Deploy apps on Eurobase",
-        "longDescription": "Eurobase builds and runs your apps from GitHub on European infrastructure. Publish a repository as a new project, deploy, redeploy or roll back, and read deployments, logs, diagnoses and usage for the projects you choose. Secret values are added in the Eurobase dashboard and never pass through the assistant.",
+        "longDescription": "Eurobase builds and runs your apps from GitHub on European infrastructure. Create a project from a GitHub repository, deploy, redeploy or roll back, and read deployments, logs, diagnoses and usage for the projects you choose. Secret values are added in the Eurobase dashboard and never pass through the assistant.",
         "developerName": "Eurobase",
         "category": "Developer Tools",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://eurobase.dev",
         "privacyPolicyURL": "https://eurobase.dev/legal/privacy",
         "termsOfServiceURL": "https://eurobase.dev/legal/terms",
@@ -29,7 +38,63 @@
         ],
         "brandColor": "#1D4ED8",
         "composerIcon": "./assets/icon.png",
-        "logo": "./assets/logo.png"
+        "logo": "./assets/logo.png",
+        "supportURL": "https://eurobase.dev/docs/agents"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List projects",
+              "prompt": "List my Eurobase projects.",
+              "tools_triggered": "eurobase_list_projects",
+              "expected_behavior": "Returns only the projects the user selected on the Eurobase consent page."
+            },
+            {
+              "description": "Explain a deployment",
+              "prompt": "Show the latest deployment of plugin-mcp-access and explain its status.",
+              "tools_triggered": "eurobase_list_deployments, eurobase_get_deployment, eurobase_diagnose_deployment",
+              "expected_behavior": "Reports the latest deployment status and the recorded diagnosis without inventing causes."
+            },
+            {
+              "description": "Read build and runtime logs",
+              "prompt": "Show the last 20 logs of that deployment.",
+              "tools_triggered": "eurobase_list_deployment_logs",
+              "expected_behavior": "Returns the latest retained log lines for the deployment."
+            },
+            {
+              "description": "Create a project",
+              "prompt": "Deploy the GitHub repository plugin-mcp/hello-mcp-review on Eurobase as a new project called review-test-app.",
+              "tools_triggered": "eurobase_whoami, eurobase_create_project, eurobase_get_deployment",
+              "expected_behavior": "Creates the project, starts its first deployment and follows it until it is healthy, then gives the project URL."
+            },
+            {
+              "description": "Redeploy",
+              "prompt": "Redeploy plugin-mcp-access.",
+              "tools_triggered": "eurobase_list_deployments, eurobase_deploy, eurobase_get_deployment",
+              "expected_behavior": "Starts a redeploy of the latest deployment and reports when it is live."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unsupported deletion",
+              "prompt": "Delete my Eurobase project plugin-mcp-access."
+            },
+            {
+              "description": "Secret values are never returned",
+              "prompt": "Show me the value of the DATABASE_URL environment variable."
+            },
+            {
+              "description": "Repository already attached to another project",
+              "prompt": "Deploy the GitHub repository plugin-mcp/hello-mcp on Eurobase as a new project called review-conflict."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Eurobase does not sell products or process payments through this plugin."
+      },
+      "publication": {
+        "release_notes": "Initial release: create projects from GitHub, deploy, redeploy and roll back, and read deployments, logs, diagnoses, usage, environment variable names and Functions."
       }
     }
   }
