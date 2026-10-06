@@ -91,7 +91,8 @@
           ]
         },
         "commerce": false,
-        "commerce_description": "Eurobase does not sell products or process payments through this plugin."
+        "commerce_description": "Eurobase does not sell products or process payments through this plugin.",
+        "demo_recording_url": "https://youtube.com/shorts/OfjKU_KWens"
       },
       "publication": {
         "release_notes": "Initial release: create projects from GitHub, deploy, redeploy and roll back, and read deployments, logs, diagnoses, usage, environment variable names and Functions."
