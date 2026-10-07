@@ -1,0 +1,11 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.eurobase/eurobase",
+  "title": "Eurobase",
+  "description": "Create, deploy and inspect Eurobase projects and Functions in the European cloud.",
+  "version": "1.0.0",
+  "websiteUrl": "https://eurobase.dev/docs/agents",
+  "repository": { "url": "https://github.com/eurobase-dev/plugins", "source": "github" },
+  "icons": [{ "src": "https://eurobase.dev/icon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }],
+  "remotes": [{ "type": "streamable-http", "url": "https://api.eurobase.dev/mcp" }]
+}
