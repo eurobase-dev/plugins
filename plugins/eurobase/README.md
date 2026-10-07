@@ -34,6 +34,9 @@ direct connection, not both, so the agent does not see duplicate tools.
   deployment and follows it until the site responds. Add secret values in the Eurobase
   dashboard; they never pass through the agent.
 - "Show the latest deployment of my project and explain its failure from the logs."
+- "Publish this function in my Eurobase project." With Functions write access the agent
+  creates or updates an HTTP Function and publishes its code; send the complete source and
+  keep secret values out of it.
 
 Writes need the Write or Full level you grant on the consent page.
 The agent cannot delete anything. Never paste tokens, cookies or secrets into a prompt
