@@ -1,0 +1,13 @@
+{
+  "name": "eurobase",
+  "displayName": "Eurobase",
+  "version": "0.3.0",
+  "description": "Deploy GitHub repositories to Eurobase and inspect deployments, logs and usage.",
+  "author": { "name": "Eurobase", "email": "support@eurobase.dev" },
+  "homepage": "https://eurobase.dev/docs/agents",
+  "repository": "https://github.com/eurobase-dev/plugins",
+  "license": "MIT",
+  "keywords": ["eurobase", "deploy", "hosting", "europe", "logs"],
+  "logo": "assets/logo.png",
+  "mcpServers": ".mcp.json"
+}
